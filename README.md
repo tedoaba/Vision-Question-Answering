@@ -1,5 +1,3 @@
-# Vision-Question-Answering
-
 This project implements a Visual Question Answering (VQA) system using a pre-trained model from Hugging Face or a locally stored model.
 
 ## Table of Contents
@@ -9,6 +7,7 @@ This project implements a Visual Question Answering (VQA) system using a pre-tra
   - [Using the Default Hugging Face Model (Online Mode)](#using-the-default-hugging-face-model-online-mode)
   - [Using a Local Model (Offline Mode)](#using-a-local-model-offline-mode)
   - [Using an Image from a URL](#using-an-image-from-a-url)
+  - [Running the Streamlit App](#running-the-streamlit-app)
 - [Running Tests Locally](#running-tests-locally)
 - [Contributing](#contributing)
 - [License](#license)
@@ -20,11 +19,9 @@ This project implements a Visual Question Answering (VQA) system using a pre-tra
     git clone https://github.com/tedoaba/Vision-Question-Answering.git
     cd Vision-Question-Answering
     ```
-
 2. Create a virtual environment:
 
     ```sh
-
     python -m venv venv
     source venv/Scripts/activate  # On Windows
 
@@ -46,12 +43,6 @@ python scripts/run_vqa.py --image "path_to_image.jpg" --question "What is the pe
 
 ### Using a Local Model (Offline Mode)
 
-Download the model by running:
-
-```sh
-python model/model_downloader.py
-```
-
 Run the VQA system with a local model:
 ```sh
 python scripts/run_vqa.py --image "path_to_image.jpg" --question "What is the color of the car?" --model_path "models/vqa/"
@@ -62,6 +53,13 @@ python scripts/run_vqa.py --image "path_to_image.jpg" --question "What is the co
 Run the VQA system with an image URL:
 ```sh
 python scripts/run_vqa.py --image "https://example.com/image.jpg" --question "What is happening in the image?" --url
+```
+
+### Running the Streamlit App
+
+To run the Streamlit app, use the following command:
+```sh
+streamlit run app.py
 ```
 
 ## Running Tests Locally
