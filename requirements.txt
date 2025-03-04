@@ -3,3 +3,4 @@ torch
 pillow 
 requests 
 matplotlib
+streamlit
